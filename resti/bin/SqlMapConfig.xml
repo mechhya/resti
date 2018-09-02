@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+<!-- <settings> -->
+<!-- 	<setting name="logImpl" value="LOG4J"/> -->
+<!-- </settings> -->
+<environments default = "development">
+   <environment id = "development">
+      <transactionManager type = "JDBC"/>         
+      <dataSource type = "POOLED">
+         <property name = "driver" value = "com.mysql.cj.jdbc.Driver"/>
+         <property name = "url" value = "jdbc:mysql://localhost:3306/resti"/>
+         <property name = "username" value = "root"/>
+         <property name = "password" value = "root"/>
+      </dataSource>            
+   </environment> 
+</environments>
+<!--    <transactionManager type="JDBC"> -->
+<!--       <dataSource type="SIMPLE"> -->
+		
+<!--          <property name="JDBC.Driver" value="com.mysql.jdbc.Driver"/> -->
+<!--          <property name="JDBC.ConnectionURL" value="jdbc:mysql://localhost:3306/testdatabase"/> -->
+<!--          <property name="JDBC.Username" value="sa"/> -->
+<!--          <property name="JDBC.Password" value="Bhupesh25#"/> --> 
+<!--           <property name="JDBC.Password" value="1234"/> -->
+			
+<!--       </dataSource> -->
+<!--    </transactionManager> -->
+<mappers>
+ <!--*********************************************************************************************-->
+ <!--////////////////////////////////////////////COMMON///////////////////////////////////////////-->
+ <!--*********************************************************************************************-->
+   <mapper resource="mapper/user.xml"/>
+ <!--*********************************************************************************************-->
+ <!--////////////////////////////////////////REGISTRATIONS////////////////////////////////////////-->
+ <!--*********************************************************************************************-->
+ </mappers> 
+
+</configuration>
