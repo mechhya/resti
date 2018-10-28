@@ -26,12 +26,16 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-    // https://mvnrepository.com/artifact/org.mybatis/mybatis
-	compile group: 'org.mybatis', name: 'mybatis', version: '3.4.2'
-	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
-	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.mybatis:mybatis:3.4.2'
+	compile 'mysql:mysql-connector-java:6.0.6'
+	compile 'org.springframework.security:spring-security-core:4.2.8.RELEASE'
+	compile 'org.springframework.security:spring-security-config:4.2.8.RELEASE'
+	compile 'org.springframework.security:spring-security-web:4.2.8.RELEASE'
+	compile 'org.springframework.security.oauth:spring-security-oauth2:2.2.3.RELEASE'
+	compileOnly 'org.projectlombok:lombok:1.18.2'
+	testCompile'org.springframework.boot:spring-boot-starter-test'
+	
 
 }
 sourceSets {
