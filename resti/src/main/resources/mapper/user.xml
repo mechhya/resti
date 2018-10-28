@@ -2,6 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="USER">
 	<select id="SELECT_01" parameterType="rest.services.dto.UserDto" resultType="rest.services.dto.UserDto">
-		select * from resti.user where id = #{id}
+		select * from tbl_user where id = #{id}
+	</select>
+	<select id="SELECT_02" parameterType="rest.services.dto.UserDto" resultType="rest.services.dto.UserDto">
+		select
+			user_name as userName
+			,password as password
+			,roles as roles
+			,delete_flg as deleteFlg
+			,locked as locked
+		from 
+			tbl_user 
+		where 
+			user_name = #{userName}
 	</select>
 </mapper>
